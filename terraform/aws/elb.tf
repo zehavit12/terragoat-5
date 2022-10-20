@@ -36,5 +36,8 @@ resource "aws_elb" "weblb" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "b4a83ce9-9a45-43b4-b6d9-1783c282f702"
+    }, {
+    version      = "version123"
+    versionclone = "version123clone"
   })
 }

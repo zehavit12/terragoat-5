@@ -27,6 +27,8 @@ resource aws_iam_role "iam_for_eks" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "de052596-21a0-43de-8153-469add277b18"
+    version              = "version123"
+    versionclone         = "version123clone"
   }
 }
 
@@ -55,6 +57,9 @@ resource aws_vpc "eks_vpc" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "1600ca6c-72f6-45c0-a71d-88e117e51d6b"
+    }, {
+    version      = "version123"
+    versionclone = "version123clone"
   })
 }
 
@@ -83,6 +88,9 @@ resource aws_subnet "eks_subnet1" {
     "kubernetes.io/cluster/$$$${local.eks_name.value}" = "shared"
     "kubernetes.io/cluster/$$${local.eks_name.value}"  = "shared"
     "kubernetes.io/cluster/$${local.eks_name.value}"   = "shared"
+    }, {
+    version      = "version123"
+    versionclone = "version123clone"
   })
 }
 
@@ -111,6 +119,9 @@ resource aws_subnet "eks_subnet2" {
     "kubernetes.io/cluster/$$$${local.eks_name.value}" = "shared"
     "kubernetes.io/cluster/$$${local.eks_name.value}"  = "shared"
     "kubernetes.io/cluster/$${local.eks_name.value}"   = "shared"
+    }, {
+    version      = "version123"
+    versionclone = "version123clone"
   })
 }
 
@@ -136,6 +147,8 @@ resource aws_eks_cluster "eks_cluster" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "7fa14261-c18d-4fa2-aec4-746f6e64d2d3"
+    version              = "version123"
+    versionclone         = "version123clone"
   }
 }
 
